@@ -1,0 +1,104 @@
+//herramientas para usar
+TOMCAT
+MAVEN 
+GRADEL 
+STS (SPRIGN FREAMEWOIR) mas orientado a java EE 
+WEB TOOLS ECLIPSE
+
+TOMCAT( contenedor web)
+
+SPRING (porq ayuda con las anotaciones y eviata las anotaciones complicadas en xml y fue el primero que implemento la inyeccion de dependencias)
+
+Empacar en el War servicios en la nueba atraves de API
+
+Deploymente Gradle y Maven 
+para pasar por el ssh el war
+y ver alguna en la nube
+
+TOMCAT(JSP Y SERVLETS y componenetes web)
+
+Patrones de diseños 
+Dispacher serblets
+Spring mvc solo un punto de entrada y de ahi va a los controladores
+
+SOAP(se usa soap en bancos)
+
+SDK AWS ()
+
+SPRIGN security(seguridad )----rebizar aparte spring security para un servicio rest
+
+Outh manejo de usuarios rebizar para implementar en java
+
+JERSEY VER QUE ES
+
+maven -> npm(manejador de dependencias)
+gradel -> repositorios maven y es empaquetador (grunt)
+
+
+JAVAEE con primafaces (aplicaciones orientadas a presentacion)
+No usar primafaces ( Solo crear los servicios )
+(no usar primefaces)
+Java 8
+ORM
+Hibernate--> (Orm a tener en cuenta a usar)
+
+EJB(aplicaction server)
+Entities de JPA ejemplo pequeño
+
+Leer JPA con Hibernate
+
+JEE(es con lo que se puede desarrolar  las plicacines web con java)
+JEE(API on librerias
+Servidor de aplicaciones par atraer los datos d eun cliente y responder )
+ES uan plataforam que nos provee API 
+API son librerais que nos dan accesos a las tecologias
+
+Aplicacioens distribuidas y transacionales velociadad y seguriada
+API(Aplication Programming INterface)
+
+COMPONENTE JEE
+Clientes aplicaon Applets
+JavasServlet, JavaServer Pages(JSP)
+EJB Enterprise Java Beans
+Stateless 
+Stateful(mantiene estado de la sesion)
+
+Contenedores Java EE
+Servidro JavaEE (
+WebConteniere es el q sabe ejecutar los ervicios
+Usar Contenerdoers tomcat
+)
+
+Java Archive(JAR)
+Web Archive(WAR)
+Entrepreise Archive(EAR)Enterprise Java Bean
+
+Estrucutra de un WAR 
+servlet 3.0 (ya no se necesita xml)
+Assammbly Root
+	WebInf
+		web.xml (antiguamente el descriptor de mi aplicacion)(reemplazado por anotaciones)
+		lib (es el que coniten todas nuetras dependencais)
+		.class(es que contien el codigo complilado el calss del server)
+	Web Pages (es el que contien todo los archivos estaticos)META-INF (Son metadatos de nuestro modulo empaquetado que no tienen nada que ver con la ejecucin de neustro codigo)
+Maven
+	pom.xml (es el encaragdo de que maven sepa como empacar)
+		(sempre seta en el root es xml)
+Build
+	Es cuando se empaca la app
+	${porojet.artifacid}  es cmo se usa en maven variables
+
+
+tomcat7-maven-plugin
+maven-war-plugin
+
+Maven 
+	mvn clean borra todos los war y relaiza la instalcion
+
+MAVEN VS GRADLE
+
+- XML vs Groovy DSL
+	gROOVY ES UN LENGUAJE DINAMICO QUE COMPILA A .CLASS DE JAVA
+
+<scope>provides</scope>
+no va en la aplicacion
