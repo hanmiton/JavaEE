@@ -402,3 +402,41 @@ java 8 nos deja hacer un empaquetado
 @Entity
 para decalrar un objeto como una entidad
 Entidad es una clase que se va a mapear dentro de una base relacional
+ @JsonIngnore
+es pra ingorar una propiedad cuando se serializa y se desiarializa 
+
+@id
+Primary key
+
+@generetaedValue
+para generear el auto id
+
+@ManytoOne 
+Muchos a uno
+
+@OnetoMany(mapped by = instrutor)
+
+@JsonIgnore
+siempre va con password
+
+gradle clean buil 
+emppaquetar para producion
+
+Mustache usar
+
+Handlebars usar
+
+++++importante
+JPA HIBERNATE
+
+JPA es una especificacion creada para acceder y hacer el mapero entre objetos y la bases de dasto ORM define la interfaces y anotaciones
+
+HIBERNTAE
+Framewsork ORM e implementacion de JPA
+
+JPA nos da las pautas como ahcerlo y HIBERNATE lo hace
+
+ORM declaras tus modelso lenguaje d programacion y tiene un framework que se ocupa de toda la persistencia
+
+HIBERNATE + JPA se puede cambiar de base de datos sin problemas
+
