@@ -342,3 +342,63 @@ para usar el metodo post
 
 @Autowired
 Es el que le poner a nivel de constructo y eso hace que se lo inyecte depues de hacer un componentscan
+que inyecte la dependencia
+
+@bean es el intanciador de un objeto
+
+@entity instancia de un objeto jpa
+
+@bean
+se declaro en la calse que tiene el @configuration
+
+Java 8 //ya viene con programacion funcional
+es donde se trata a las funciones como objetos
+
+Lambda Expressions
+	funciones como argumentos/codigo como datos;
+Interfaces funcionales
+	Metodo Abstracto : Es un metodo que no tiene implementacion
+Runnable runnable = () -> System.out.println("Lamda Platzi");
+
+Interfaces 
+	Se encuentran los metordos pero sin su iimplementacion
+
+Comparator<Message> c = (Messagem1, Message m2) -> m1.getSize() -m2.getSize();
+
+List<Message> messages = Arrays.asList(new Message("Mensaje ams largo que existe2"),
+new  Message ("mesaje menos largo2"),
+new Message("Mensaje realmente mas largo que existe"));
+
+
+messages.sort(c);
+
+for(Message message: messages){
+	System.out.println(message.getMessage());
+}
+
+con lambda
+
+messages.forEach(message-> System.out.ptinln(message.getMessage()));
+
+
+Streams = Secuena de elementos  aparti de uan fuente que soporta operacion de agregacion
+
+
+Exempllo de los streams con lamba o funciones anonimas
+Strema 
+	Metodos intermediarios
+	Metodos finales
+List<Message> filteredList = message.stream().filter(
+message -> message.getMessage().contains("Platzi").collect(Collectors.toList()));
+
+@SprignBootApplication
+@EnableAsinc
+@ComponentScan(basePackages = 'platzi');
+{/id} se usa variables en el path
+
+Objeto tipo optional
+java 8 nos deja hacer un empaquetado
+
+@Entity
+para decalrar un objeto como una entidad
+Entidad es una clase que se va a mapear dentro de una base relacional
