@@ -100,5 +100,245 @@ MAVEN VS GRADLE
 - XML vs Groovy DSL
 	gROOVY ES UN LENGUAJE DINAMICO QUE COMPILA A .CLASS DE JAVA
 
-<scope>provides</scope>
+<scope>provided</scope>
 no va en la aplicacion
+
+Repositorio princ
+http://search.maven.org/
+JavaEE para app rest
+https://static.platzi.com/media/public/uploads/56147fcc277041a3a77fcda4.pdfipal de maeven 
+
+
+Jackson, Apache son publicadas en servidore sde maaeven repositorio central
+
+
+Tipo se aplicacioesn vistas vs servicios
+Orientadas a presentacion
+	HTML+XHTML,JSF
+
+MVC model
+View-User-Controller-Model
+
+Orientadas a SErvicios
+Java EE APIs TODO ESTO CONSULATAR)
+	- Java Servlet Technology
+	- Java API REST (JAX-RS= nos indica como hacer los servicios REST)
+	- Dependency injection (CDI)
+	- Java Persistence API
+Java Servlet
+	 - responder una peticin http cn java (es la forma mas rapida)
+
+ClienteWeb-httpresquest-servlet coje reqeust-conecta web components-(java beans components, bases datos)-response-vista
+
+Servlet
+	-Clase de java (req y response)
+Scope
+	Web Context, Session, Request, Page(JSP)
+
+web.xml = se hizo opcinal ahora se reemplaco ocn anotaciones 
+Anotacoines = son metadata (datso de los datos)
+
+ANOTACIONES
+//para servlet
+@WebServlet("/platzijava")
+
+@override sobresescrib el metodo de la superclases para usar en el servlet
+
+//Dependencais a usar en proyecto
+javaee-api 7.0
+jackson-databind 2.6.2 (Permite convertir el jsona un objeto)
+jackson-core 2.6.2 ()
+
+//convertir jsona message
+//antes crea la clase la cual tenga el objeto
+ObjectMapper mapper = new ObjectMapper();
+Message message = mapper.readVAlue(json.toString(), Message.class);
+
+//especificar en cabezera que es application/json
+
+Deserealizando 
+Convertir un json en bojeto
+Serealizacin
+Convertir un bojeto a json
+
+//calse de bojeto
+ObjectMapper maper = new ObjectMapper();
+
+//filtros objetos muy utilizados
+@WebFilter(filterName= "nomre")
+//iniciar valores
+@WebInitParam(name = "estado, value "Feliz)
+
+//para maven toca definir el java_home
+
+
+//como configurar el proyecto
+
+//ver que es try resource
+
+//Es necesario que el json fuera igual a ala calse java
+
+//estructura de directrios q maven necesita pra compilar y empaquetar nuestra app
+
+test
+	src/main/java
+	pom.xml
+
+	mvn elipse:eclipse
+
+//para n tener que isntalar tomcat tomcat7/maven/
+
+mvn tomcat:run
+
+//Sprin data proyect para trabajr con la data
+
+//para serguridad en restful auth2
+//srpign security
+Spring security para usar password
+
+//Inverface Uniforme
+
+Recurso sIdentificados por medio de URIs
+Manipulacion de recursos a trave sde prpresetnacioes(XML,JSON)
+Mensajes auto-despiptivos(meta-data content/type)
+HATEOAS(Hypermedia As The Engine Of Application State)
+
+//buenos ejemplos de uri
+/user/obernal (get)
+/user (adicionar)
+/user/obernal/courses (get)
+/user/obernal/courses/java-avanzado (get)
+
+//CODIGOS DE STATUS HTTP
+//nunka es aconsejable borrar datos de la base de datos es mejor poner como descativado en vez de borra
+
+1xx: Informacional
+2xx: Suceso(201 recurso bien creado)
+3xx: Redireccion
+4xx: Error Cliente(404 error del cliente por ejemplo uri que no existe)
+5xx: Error Servidor(500 error en el servidor )
+
+//Inyeccion de dependencais 
+Dependency Injection/Inversion Control
+//INjection dependencias
+Como manejar las pdependencais las clases dentor de nuestro código
+
+//Factory
+son los encargados de mandar las instancias de los objetos
+
+/Inyection de dependencias
+Uno inyecta la clase q se desea usar mas no el tiene la clase
+
+//SPRING es un framework q nos ayuda hacer la inyecion de depndencias
+//Spring Container
+**Ver resful app on spring 
+
+//Uso de srpign con anotaciones
+//para usar gradel con ide o eclipse
+Solo se baja en plugin del IDE y se corre grable
+
+//Spring es un framework mucho mas modualr
+
+//Anotaciones
+Confia q las dependencais le lelguen por que pertenece aun contexto que se encarga de darle las dependencias
+
+@Component es un componennte dentro de un contexto
+
+@Autowired Anotacion nativa de Spring  hacer a nivel de contructor 
+Dice llama a este constructor y injecta todas sus dependencais viendo el contexto
+
+
+//Imporntante cuando se trabaja con injeccion de dependencai
+@Configuration (elimina el uso de xml)
+Esta es la calse q contiene los beans q son las instancias de los beans que tu vas a inyectar
+
+@ComponenetScarn
+Escanea todos los objetso que tiene el @componente inyecta sus dependencias e instancialos tambien
+
+@Configuration y @ComponentScan van en la clases que va tener los objetos los cuales se van a inyectar 
+
+@Bean 
+Son los que contienen la logia de negocio y los cuales se les lalma de acuerdo a las inyecciones realizadas
+
+Lineas importantes dentro del codigo para agilizar la programacion con sprign
+ApplicationContext context = new AnnotationConfigApplicatonContext(Application.class);
+MessagePrinter printer = context.getBean(MessagePrinter.classs);
+
+**Se llama al contexto los beans y este va tener todas sus dependencais inyectadas
+
+//para poder manejar las dependencias se necesita 
+La dependencia de sprign context
+
+Spring Core
+Dependence Inyeccion
+Spring Web MVC
+Nos ayuda pra poder realizar las app web
+-abstrare la searilizacion y deserealizacion de objetos
+-paresar los request
+
+**Restfull Spring MVC
+
+//Dispacher Servlet
+//Patron de diseño Front Controller 
+
+Front Controller
+	- ES el que recibe tod y es que parse el request
+	- Transforma json en objetos
+
+Controller
+	- Son como servlets con esteroides
+
+View
+	- Se lo va realizar ocn angular
+
+//Spring MVC
+Dependencais
+	- sprign-boot-starter-web
+	- spring boot starter jersey
+//Spring boot 
+Es un modulo de spring que nos permite hacer todas configuracion de losas anotaciones (el se encarga de todas las anotaciones automaticamente)
+
+//FrontController
+Es un servelt por defincion que puede aplica rfiltros al dispacher servlet
+
+@qualifier 
+es mejro evitarlo a menos que sea neceario
+
+addMappgin(/*);
+va cojer todos los request que vayan a las distintas url
+
+ @RestController
+ nose retoran solo el body del request se encarga por nosostors de extraer
+
+ @RequestMappging
+ funciona tanto a nivle de clase como emtodo y es paera especificar las url que se van a llamar para ocnsumir el servicio
+
+
+ plugin Sprign boot
+ 	boot run
+ plugin war
+
+ //JERSEY
+ especificacioens oficilles de jax-rs
+
+ @Component
+ Clase se va encontra dentor de un contexto
+ @Path("/jersy")
+ Para especificar la ruta del recurso
+ @GET
+ Metodo de rest
+ @Produces("application/json")
+ En que formato se va trabajar
+necesita una configuracion
+ Jersey 
+necesita un @Configuration
+//GRADLE
+ProvidedRunTime
+
+para usar el metodo post
+@RequestMapping(method= RequestMethod.POST)
+
+@Requestbody puede resivir un objeto compreto
+
+@Autowired
+Es el que le poner a nivel de constructo y eso hace que se lo inyecte depues de hacer un componentscan
